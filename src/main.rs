@@ -12,6 +12,7 @@ fn main() {
         .add_plugin(voxel::VoxelWorldPlugin)
         .add_plugin(debug::DebugUIPlugins)
         .add_startup_system(setup)
+        .add_startup_system(setup2)
         .run();
 }
 
@@ -26,4 +27,9 @@ fn setup(mut cmds: Commands) {
     })
     .insert(voxel::player::PlayerController::default())
     .insert(bevy_atmosphere::plugin::AtmosphereCamera(None));
+}
+
+fn setup2(asset_server: Res<AssetServer>, audio: Res<Audio>) {
+    let music = asset_server.load("../assets/sounds/sound1.ogg");
+    audio.play(music);
 }
