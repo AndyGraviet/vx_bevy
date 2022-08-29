@@ -1,6 +1,5 @@
 #![feature(map_first_last)]
 use std::f32::consts::PI;
-
 use bevy::prelude::*;
 
 mod debug;
@@ -18,6 +17,7 @@ fn main() {
         .run();
 }
 
+
 fn setup(mut cmds: Commands) {
     cmds.spawn_bundle(Camera3dBundle {
         projection: bevy::render::camera::Projection::Perspective(PerspectiveProjection {
@@ -31,6 +31,8 @@ fn setup(mut cmds: Commands) {
     .insert(bevy_atmosphere::plugin::AtmosphereCamera(None));
 }
 
+
+//I've added everything below here
 fn addMusic(asset_server: Res<AssetServer>, audio: Res<Audio>) {
     let music = asset_server.load("../assets/sounds/sound1.ogg");
     audio.play(music);
