@@ -27,19 +27,19 @@ impl Plugin for VoxelWorldBaseMaterialsPlugin {
             .unwrap();
 
         registry.register_material::<Dirt>(MaterialRegistryInfo {
-            base_color: Color::rgb_u8(112, 97, 92),
+            base_color: Color::rgb_u8(245,231,171),
             name: Dirt::NAME,
             flags: VoxelMaterialFlags::SOLID,
         });
 
         registry.register_material::<Sand>(MaterialRegistryInfo {
-            base_color: Color::rgb_u8(228, 219, 148),
+            base_color: Color::rgba_u8(245,231,171,96),
             name: Sand::NAME,
             flags: VoxelMaterialFlags::SOLID,
         });
 
         registry.register_material::<Grass>(MaterialRegistryInfo {
-            base_color: Color::LIME_GREEN,
+            base_color: Color::rgba_u8(155,245,122,96),
             name: Grass::NAME,
             flags: VoxelMaterialFlags::SOLID,
         });
@@ -57,7 +57,7 @@ impl Plugin for VoxelWorldBaseMaterialsPlugin {
         });
 
         registry.register_material::<Water>(MaterialRegistryInfo {
-            base_color: *Color::rgb_u8(78, 167, 215).set_a(0.4),
+            base_color: Color::rgba_u8(135,138,245,96),
             name: Water::NAME,
             flags: VoxelMaterialFlags::LIQUID,
         });
@@ -81,13 +81,13 @@ impl Plugin for VoxelWorldBaseMaterialsPlugin {
         });
 
         registry.register_material::<Wood>(MaterialRegistryInfo {
-            base_color: Color::rgb_u8(188, 147, 97),
+            base_color: Color::rgba_u8(245,231,171,96),
             name: Wood::NAME,
             flags: VoxelMaterialFlags::SOLID,
         });
 
         registry.register_material::<Leaves>(MaterialRegistryInfo {
-            base_color: Color::rgb_u8(90, 186, 69),
+            base_color: Color::rgba_u8(245,159,235,96),
             name: Leaves::NAME,
             flags: VoxelMaterialFlags::SOLID,
         });
